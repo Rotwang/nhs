@@ -1,0 +1,19 @@
+{"HealthCheck":
+        [
+                {"URL": "http://google.pl/", "Expect": 200},
+                {"TCP": "crux.org.pl", "Port": 80},
+                {"URL": "https://github.com"},
+                {"Shell": "echo tutej", "Expect": 0}
+        ],
+ "Healthy":
+        [
+                {"Shell": "echo cycki", "Expect": 0},
+                {"TCP": "0.0.0.0", "Port": 8888},
+                {"HTTP": "0.0.0.0:8080", "Give": 200},
+                {"TCP": "127.0.0.1"}
+        ],
+ "Ill":
+        [
+                {"Shell": "echo dupa"}
+        ]
+}
